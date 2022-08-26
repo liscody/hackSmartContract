@@ -31,9 +31,28 @@ Run prettier solidity:
 npx hardhat verify --network mainnet DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
 
 ```
+Run HTTP server 
+```shell
+http-server
+```
 
-npx hardhat run scripts/deploy.js --network rinkeby
-ERC20 deployed on address:  0xa460B4CaF93B97eEd9A8A3184FAF03769939a024
-NFT deployed on address:  0xFCfF31dC12975b4306846162B12518C4e60A7426
+Read from the contract storage 
+```shell
+await web3.eth.getStorageAt("0x39fe049C213d6C49D51A3b415a80a662C39c3b52", 0).then(console.log());
 
-npx hardhat verify --network rinkeby 0xFCfF31dC12975b4306846162B12518C4e60A7426
+```
+
+
+## Deployed on Rinkeby testnet 
+
+contract Secret.sol
+```shell
+0x39fe049C213d6C49D51A3b415a80a662C39c3b52
+
+```
+
+contract Solution.sol
+```shell
+0xf9Cd98c17D8a1b594A6789B5F458a44364912309
+```
+
